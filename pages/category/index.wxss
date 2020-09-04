@@ -1,0 +1,33 @@
+.tabs-view {
+    width: 100vw;
+    position: sticky;
+    background-color: #FFF;
+    z-index: 8888;
+}
+
+.tabs-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.tab-item {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+    padding: 20rpx 24rpx 12rpx;
+}
+
+.tab-activity {
+    font-weight: bold;
+    border-bottom: 6rpx solid #FF4500;
+}
+
+::-webkit-scrollbar {
+    display:none;
+    width:0;
+    height:0;
+    color:transparent;
+
+}

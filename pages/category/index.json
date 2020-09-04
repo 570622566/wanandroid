@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-search": "../../components/search/search",
+    "my-obj-item": "../../components/objItem/objitem"
+  },
+  "navigationStyle": "custom"
+}

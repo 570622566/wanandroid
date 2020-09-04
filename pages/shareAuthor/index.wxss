@@ -1,0 +1,29 @@
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28rpx;
+    color: #FFF;
+    background-color: #226FF2;
+    padding-bottom: 20rpx;
+
+}
+
+.header-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.user-info {
+    margin-top: 20rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 26rpx;
+}
+
+.user-info .common {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

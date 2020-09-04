@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/articleitem/articleitem"
+  },
+  "onReachBottomDistance": 50
+}

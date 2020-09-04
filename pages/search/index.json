@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarTitleText": "搜索"
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/articleitem/articleitem",
+    "my-search": "../../components/search/search"
+  },
+  "navigationBarTitleText": "问答",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom"
+}

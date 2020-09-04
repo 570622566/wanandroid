@@ -1,0 +1,19 @@
+<my-search/>
+<view class="container" style="padding-top:{{navHeight}}px">
+
+    <block wx:for="{{webNavs}}" wx:key="index">
+        <view class="category-container" data-key="{{index}}">
+            <text class="menu-title">{{item.name}}</text>
+            <view class="item-container">
+                <block wx:for="{{webNavs[index].articles}}" wx:key="id">
+                    <text class="tixi-item"
+                          bindtap="onItemClick" data-link="{{item.link}}">{{item.title}}
+                    </text>
+                </block>
+            </view>
+        </view>
+        <view wx:if="{{webNavs.length-1===index}}" style="height:30rpx"/>
+    </block>
+
+</view>
+

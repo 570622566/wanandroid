@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/category/index",
+    "pages/answers/index",
+    "pages/articleDetail/index",
+    "pages/search/index",
+    "pages/searchResult/index",
+    "pages/tixi/index",
+    "pages/tixiDetail/index",
+    "pages/webnav/index",
+    "pages/shareAuthor/index",
+    "pages/author/index",
+    "pages/login/index",
+    "pages/me/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#226FF2",
+    "navigationBarTitleText": "玩安卓",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#226FF2",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "./assets/icon_home_nor.png",
+        "selectedIconPath": "./assets/icon_home_sel.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "项目",
+        "iconPath": "./assets/icon_xiangmu_nor.png",
+        "selectedIconPath": "./assets/icon_xiangmu_sel.png"
+      },
+      {
+        "pagePath": "pages/answers/index",
+        "text": "问答",
+        "iconPath": "./assets/icon_wenda_nor.png",
+        "selectedIconPath": "./assets/icon_wenda_sel.png"
+      },
+
+      {
+        "pagePath": "pages/tixi/index",
+        "text": "体系",
+        "iconPath": "./assets/icon_tixi_nor.png",
+        "selectedIconPath": "./assets/icon_tixi_sel.png"
+      },
+
+      {
+        "pagePath": "pages/webnav/index",
+        "text": "导航",
+        "iconPath": "./assets/icon_nav_nor.png",
+        "selectedIconPath": "./assets/icon_nav_sel.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

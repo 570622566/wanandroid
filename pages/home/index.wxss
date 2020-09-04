@@ -1,0 +1,30 @@
+/* pages/home/index.wxss */
+
+.home-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.banner-swiper {
+    height: 360rpx;
+}
+
+
+.banner-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.hots-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer{
+    background-color: #efefef;
+}
+

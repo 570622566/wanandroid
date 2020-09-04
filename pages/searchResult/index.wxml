@@ -1,0 +1,7 @@
+<view class="result-container">
+
+    <block wx:for="{{results}}" wx:key="id">
+        <article-item article="{{item}}"/>
+    </block>
+
+</view>

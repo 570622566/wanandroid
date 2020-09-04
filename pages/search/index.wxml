@@ -1,0 +1,27 @@
+<view class="search-container">
+    <van-search value="{{ hotKey }}"
+                bind:change="onChange"
+                use-action-slot placeholder="请输入搜索关键词" bind:search="onSearch">
+        <view slot="action" bind:tap="onSearchClick">搜索</view>
+    </van-search>
+    <text class="hot-key-title">热门搜索</text>
+    <view class="hot-key-list">
+        <block wx:for="{{hotKeys}}" wx:key="id">
+            <text class="hot-key" data-value="{{item.name}}" bindtap="onSearchKeyClick">{{item.name}}</text>
+        </block>
+    </view>
+
+    <view class="his-search">
+        <text class="hot-key-title">历史搜索</text>
+        <text class="hot-key-clear" bindtap="onClearClick">清除</text>
+    </view>
+    <view class="hot-key-list">
+        <block wx:for="{{hisKeys}}" wx:key="*this">
+            <text class="hot-key" data-value="{{item}}" bindtap="onSearchKeyClick">{{item}}</text>
+        </block>
+    </view>
+    <mp-dialog title="提示" show="{{clearDialogShow}}" bindbuttontap="onShowClearDialog" buttons="{{[{text: '取消'}, {text: '确定'}]}}">
+        <view>是否清除历史搜索记录？</view>
+    </mp-dialog>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/articleitem/articleitem"
+  },
+  "navigationBarTitleText": "搜索结果",
+  "onReachBottomDistance": 50
+}

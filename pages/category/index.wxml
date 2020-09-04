@@ -1,0 +1,25 @@
+<my-search/>
+<view class="container" style="padding-top:{{navHeight}}px">
+
+    <scroll-view class="tabs-view" scroll-x scroll-with-animation scroll-left="{{scrollLeft}}"
+                 style="top: {{navHeight}}px">
+        <view class="tabs-container">
+            <block wx:for="{{categoryTabs}}" wx:key="id">
+                <text class="tab-item {{itemActivity===index?'tab-activity':''}}" data-index="{{index}}"
+                      bindtap="onClickItem">{{item.name}}
+                </text>
+            </block>
+        </view>
+    </scroll-view>
+
+    <swiper bindchange="swiperChange" current="{{itemActivity}}" style="width: 100%;height:{{scrollHeight}}px;">
+        <block wx:for="{{categoryTabs}}" wx:key="id">
+            <swiper-item>
+                    <my-obj-item id="item-{{index}}" itemId="{{item.id}}" scrollHeight="{{scrollHeight}}"></my-obj-item>
+            </swiper-item>
+
+        </block>
+
+    </swiper>
+
+</view>

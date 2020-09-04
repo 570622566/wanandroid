@@ -1,0 +1,35 @@
+<view class="container">
+    <my-search/>
+    <view class="tixi-container" style="top:{{navHeight}}px">
+        <scroll-view class="left-menu" scroll-with-animation style="height:{{scrollHeight}}px" scroll-y scroll-top="{{scrollTop}}">
+            <block wx:for="{{tixiMenus}}" wx:key="id">
+                <view class="left-item {{activeKey===index?'activity-item':''}}" data-index="{{index}}"
+                      bindtap="onMenuClick">
+                    {{item.title}}
+                </view>
+            </block>
+
+        </scroll-view>
+
+        <scroll-view class="right-container" scroll-with-animation style="height:{{scrollHeight}}px;"
+                     bindscroll="onRightScroll" scroll-y
+                     scroll-into-view="tixi-{{intoView}}" enhanced bindscrolltoupper="onScrolltoupper">
+            <view>
+                <block wx:for="{{tixiMenus}}" wx:key="id">
+                    <view class="category-container" data-key="{{index}}" id="tixi-{{index}}">
+                        <text class="menu-title">{{item.title}}</text>
+                        <view class="item-container">
+                            <block wx:for="{{tixiItems[index].children}}" wx:key="id">
+                                <text class="tixi-item" data-cid="{{item.id}}" data-name="{{item.name}}"
+                                      bindtap="onTixiClick">{{item.name}}
+                                </text>
+                            </block>
+                        </view>
+                    </view>
+                    <view wx:if="{{tixiMenus.length-1===index}}" style="height:30rpx"/>
+
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+</view>

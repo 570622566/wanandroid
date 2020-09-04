@@ -1,0 +1,27 @@
+.category-container {
+    display: flex;
+    flex-direction: column;
+}
+.menu-title {
+    width: 100%;
+    color: #333;
+    font-size: 28rpx;
+    text-align: center;
+    margin-top: 24rpx;
+}
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 24rpx;
+}
+
+.tixi-item {
+    padding: 8rpx 28rpx;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    background-color: #efefef;
+    margin-left: 24rpx;
+    margin-top: 24rpx;
+    color: #666;
+
+}

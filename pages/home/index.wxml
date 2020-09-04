@@ -1,0 +1,26 @@
+	<my-search />
+	<view class="container" style="padding-top:{{navHeight}}px">
+		<swiper class="banner-swiper" autoplay indicator-dots circular>
+			<block wx:for="{{banners}}" wx:key="index">
+				<swiper-item class="banner-item" data-url="{{item.url}}" bindtap="onBannerClick">
+					<image src="{{item.imagePath}}" mode="widthFix"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="hots-article">
+			<block wx:for="{{topArticles}}" wx:key="id">
+				<article-item article="{{item}}" is-top />
+			</block>
+
+		</view>
+		<view class="hots-article">
+			<block wx:for="{{hotsArticles}}" wx:key="id">
+				<article-item article="{{item}}" />
+			</block>
+
+		</view>
+		<view class="footer" wx:if="{{showFooter}}">
+			<mp-loading type="circle"></mp-loading>
+		</view>
+
+	</view>

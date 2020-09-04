@@ -1,0 +1,5 @@
+  <scroll-view  scroll-y style="height: {{scrollHeight}}px" bindscrolltolower="onScrolltolower">
+    <block wx:for="{{objItems}}" wx:key="index">
+        <article-item article="{{item}}"></article-item>
+    </block>
+  </scroll-view>

@@ -1,0 +1,3 @@
+<view class="detail">
+    <web-view src="{{detailUrl}}"></web-view>
+</view>

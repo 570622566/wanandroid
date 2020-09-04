@@ -1,0 +1,50 @@
+<view class="container" style="background-color: #226FF2;height: 100vh;align-items: center">
+
+    <text class="close-bt" bindtap="onCloseClick">关闭</text>
+
+    <image class="login-header" src="../../assets/login_header.png"/>
+    <text class="login-tip">欢迎使用</text>
+    <view class="login-container">
+        <text class="top-tip" bindtap="onChangeClick">{{leadTip}}</text>
+
+        <swiper style="width:100%;height:100%;margin-top:20rpx;" current="{{currentIndex}}" bindchange="onLoginChange">
+            <swiper-item>
+                <view class="login-view">
+                    <view class="input-view">
+                        <mp-icon icon="me" size="26" color="#666"/>
+                        <input confirm-type="next" placeholder="请输入用户名" maxlength="14" bindblur="onUserNameBlur"/>
+                    </view>
+                    <view class="input-view">
+                        <mp-icon icon="lock" size="26" color="#666"/>
+                        <input password placeholder="请输入密码" maxlength="14" bindblur="onUserPassWordBlur"/>
+                    </view>
+
+                    <view class="submit-bt" bindtap="onLoginClick">登录</view>
+
+                </view>
+
+            </swiper-item>
+
+            <swiper-item>
+                <view class="login-view">
+                    <view class="input-view">
+                        <mp-icon icon="me" size="26" color="#666"/>
+                        <input confirm-type="next" placeholder="请输入用户名" maxlength="14" bindblur="onReUserNameBlur"/>
+                    </view>
+                    <view class="input-view">
+                        <mp-icon icon="lock" size="26" color="#666"/>
+                        <input confirm-type="next" password placeholder="请输入密码" maxlength="14" bindblur="onRePassWordBlur"/>
+                    </view>
+                    <view class="input-view">
+                        <mp-icon icon="lock" size="26" color="#666"/>
+                        <input password placeholder="再次请输入密码" maxlength="14" bindblur="onRepeatPassWordBlur"/>
+                    </view>
+                    <view class="submit-bt" style=" background-color: #ff6034;" bindtap="onRegisterClick">注册</view>
+                </view>
+            </swiper-item>
+
+        </swiper>
+
+
+    </view>
+</view>

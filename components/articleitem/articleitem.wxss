@@ -1,0 +1,49 @@
+.article-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1rpx solid #EFEFEF;
+    padding: 18rpx 24rpx;
+}
+
+
+.item-share {
+    display: flex;
+    color: #999;
+    font-size: 22rpx;
+}
+
+
+.article-item-title {
+    font-size: 30rpx;
+    color: #333;
+    margin-top: 8rpx;
+    line-height: 38rpx;
+}
+
+.highlight {
+    color: red;
+}
+
+.article-item-desc {
+    margin-top: 10rpx;
+    display: -webkit-box;
+    font-size: 28rpx;
+    color: #666;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: 2em
+}
+
+.article-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+    margin-top: 12rpx;
+    color: #888;
+    line-height: 24rpx;
+}
+

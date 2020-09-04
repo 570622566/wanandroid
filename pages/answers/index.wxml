@@ -1,0 +1,9 @@
+<my-search/>
+<view class="container" style="padding-top:{{navHeight}}px">
+    <view class="answer-container">
+        <block wx:for="{{answers}}" wx:key="id">
+            <article-item article="{{item}}"/>
+        </block>
+    </view>
+</view>
+

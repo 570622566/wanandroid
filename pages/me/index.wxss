@@ -1,0 +1,52 @@
+.user-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0rpx;
+    margin: 0rpx;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40rpx;
+    color: #FFF;
+    background-color: #226FF2;
+    padding-bottom: 32rpx;
+
+}
+
+.header-img {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.user-info {
+    margin-top: 20rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 26rpx;
+}
+
+.user-info .common {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-bt {
+    width: 400rpx;
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 6rpx;
+    color: #1989fa;
+    font-size: 26rpx;
+
+}

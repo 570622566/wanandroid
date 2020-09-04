@@ -1,0 +1,11 @@
+<view class="nav" style="height: {{navHeight}}px">
+    <view class="menu"
+          style="margin-top: {{searchTop}}px;margin-left: {{searchLeft}}px;height: {{searchHeight}}px;width: {{searchWidth}}px">
+        <van-icon name="wap-nav" color="#FFF" size="30" bindtap="onMenuClick"/>
+        <view class="search"
+              style="margin-left: {{searchLeft}}px;" bindtap="searchClick">
+            <text style="margin-right:10rpx;font-size: 28rpx">搜索</text>
+            <icon type="search" size="20" color="rgba(255,255,255,0.7)"></icon>
+        </view>
+    </view>
+</view>

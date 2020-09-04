@@ -1,0 +1,20 @@
+<view class="article-item" data-link="{{article.link}}" bindtap="onNavigatorClick">
+
+    <view class="item-share">
+        <text wx:if="{{article.fresh}}" style="color: #FF4500;margin-right: 12rpx">新</text>
+        <text catchtap="onAuthorClick">{{article.author ? '作•' + article.author : '分•' + article.shareUser}}</text>
+        <text style="margin-left: 24rpx;flex: 1;text-align: right">{{article.niceShareDate}}</text>
+    </view>
+    <rich-text class="article-item-title" nodes="{{article.title}}"/>
+    <rich-text class="article-item-desc" wx:if="{{article.desc.length>0}}" nodes="{{articleDesc}}"/>
+
+    <view class="article-bottom" data-cid="{{article.chapterId}}" data-name="{{article.chapterName}}"
+          catchtap="onCategoryClick">
+        <view>
+            <text wx:if="{{isTop}}" style="color: #FF4500;margin-right: 12rpx">顶</text>
+            <text>{{article.superChapterName}}•{{article.chapterName}}</text>
+        </view>
+        <mp-icon icon="like" color="#FF4500" size="22" type="{{article.collect?'field':'outline'}}" catchtap="onCollectClick"/>
+    </view>
+
+</view>

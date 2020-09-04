@@ -1,0 +1,26 @@
+<view class="user-container">
+
+    <view class="header-container">
+        <image class="header-img" src="../../assets/icon_header1.png" widthFix/>
+        <text style="margin-top: 16rpx;font-size: 30rpx">{{user.nickName}}</text>
+        <view wx:if="{{!showLogin}}" class="user-info">
+            <view class="common">
+                <text>{{user.level}}</text>
+                <text style="margin-top: 6rpx">等级</text>
+            </view>
+
+            <view class="common">
+                <text>{{user.rank}}</text>
+                <view style="margin-top: 6rpx">排名</view>
+            </view>
+
+            <view class="common">
+                <text>{{user.coinCount}}</text>
+                <view style="margin-top: 6rpx">积分</view>
+            </view>
+        </view>
+
+        <view class="login-bt" wx:if="{{showLogin}}" bindtap="onLoginClick">登录</view>
+    </view>
+
+</view>

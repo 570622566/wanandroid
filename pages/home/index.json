@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-loading": "weui-miniprogram/loading/loading",
+    "my-search": "../../components/search/search",
+    "article-item": "../../components/articleitem/articleitem"
+  },
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom"
+}
