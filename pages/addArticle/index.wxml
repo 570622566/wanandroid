@@ -1,0 +1,16 @@
+<view class="container">
+
+    <view style="padding: 60rpx 24rpx 0rpx 24rpx;">
+        <input class="input-content" placeholder="请输入标题" bindblur="onTitleBlur"/>
+    </view>
+
+    <view style="padding: 100rpx 24rpx 0rpx 24rpx;">
+        <input class="input-content" placeholder="请输入网站地址" bindblur="onWebUrlBlur"/>
+    </view>
+
+    <view style="padding: 120rpx 24rpx 0rpx 24rpx;">
+        <view class="submit" bindtap="onSubmitClick">提交</view>
+    </view>
+
+
+</view>

@@ -1,0 +1,14 @@
+.add-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 24rpx;
+    right: 24rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background-color: #226FF2;
+    box-shadow: 2rpx 2rpx 2rpx 2rpx rgba(0, 0, 0, 0.2);
+}
+

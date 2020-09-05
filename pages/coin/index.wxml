@@ -1,0 +1,10 @@
+<view class="container">
+    <block wx:for="{{coins}}" wx:key="id">
+
+        <view class="coin-item">
+            <text>{{item.desc}} 获得<text style="color:red;">{{item.coinCount}}</text>积分</text>
+        </view>
+
+    </block>
+
+</view>

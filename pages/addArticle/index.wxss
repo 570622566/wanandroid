@@ -1,0 +1,18 @@
+.input-content {
+    width: 100%;
+    color: #333;
+    padding-bottom: 16rpx;
+    border-bottom: #EFEFEF solid 1rpx;
+    font-size: 28rpx;
+}
+
+.submit {
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #226FF2;
+    border-radius: 6rpx;
+    color: #FFF;
+    font-size: 30rpx;
+    text-align: center;
+}
+

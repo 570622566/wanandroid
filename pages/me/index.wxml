@@ -2,25 +2,51 @@
 
     <view class="header-container">
         <image class="header-img" src="../../assets/icon_header1.png" widthFix/>
-        <text style="margin-top: 16rpx;font-size: 30rpx">{{user.nickName}}</text>
+        <text style="margin-top: 16rpx;font-size: 34rpx">{{user.nickName}}</text>
         <view wx:if="{{!showLogin}}" class="user-info">
             <view class="common">
                 <text>{{user.level}}</text>
                 <text style="margin-top: 6rpx">等级</text>
             </view>
 
-            <view class="common">
+            <view class="common" bindtap="onRankClick">
                 <text>{{user.rank}}</text>
                 <view style="margin-top: 6rpx">排名</view>
             </view>
 
-            <view class="common">
+            <view class="common" bindtap="onCoinClick">
                 <text>{{user.coinCount}}</text>
                 <view style="margin-top: 6rpx">积分</view>
             </view>
         </view>
 
         <view class="login-bt" wx:if="{{showLogin}}" bindtap="onLoginClick">登录</view>
+    </view>
+
+    <view class="menu" bindtap="onShareClick">
+        <image class="left-img" src="../../assets/icon_share.png"/>
+        <text>我的分享</text>
+        <image class="right-img" src="../../assets/icon_go.png"></image>
+    </view>
+    <view class="menu">
+        <image class="left-img" src="../../assets/icon_collect.png"/>
+        <text>我的收藏</text>
+        <image class="right-img" src="../../assets/icon_go.png"></image>
+    </view>
+    <view class="menu">
+        <image class="left-img" src="../../assets/icon_about.png"/>
+        <text>关于</text>
+        <image class="right-img" src="../../assets/icon_go.png"></image>
+    </view>
+
+    <view class="menu">
+        <image class="left-img" src="../../assets/icon_setting.png"/>
+        <text>设置</text>
+        <image class="right-img" src="../../assets/icon_go.png"></image>
+    </view>
+    <view  wx:if="{{!showLogin}}" style=" position: absolute;left: 0rpx;bottom: 0rpx; width: 100%;">
+        <view class="logout-bt" bindtap="onLogoutClick">退出</view>
+
     </view>
 
 </view>

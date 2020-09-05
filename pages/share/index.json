@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/articleitem/articleitem",
+    "mp-icon": "weui-miniprogram/icon/icon"
+
+  },
+  "navigationBarTitleText": "我的分享"
+}

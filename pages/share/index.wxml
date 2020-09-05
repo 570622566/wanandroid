@@ -1,0 +1,9 @@
+<view class="container">
+    <block wx:for="{{shareArticles}}" wx:key="id">
+        <article-item article="{{item}}"/>
+    </block>
+
+    <view class="add-article" bindtap="addArticleClick">
+        <mp-icon icon="add" color="white" size="{{26}}"></mp-icon>
+    </view>
+</view>

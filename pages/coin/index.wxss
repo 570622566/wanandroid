@@ -1,0 +1,9 @@
+.coin-item {
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    font-size: 28rpx;
+    color: #333333;
+    border-bottom: #EFEFEF solid 1rpx;
+}

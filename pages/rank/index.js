@@ -1,18 +1,35 @@
-// pages/searchResult/index.js
+// pages/rank/index.js
 const api = require('../../request/api.js')
 Page({
-  page: 0,
+  page: 1,
   pageCount: 1,
   isLoading: false,
-  keyWord: '',
+  windowWidth: wx.getSystemInfoSync().windowWidth,
+  initcoin: 0,
   /**
    * 页面的初始数据
    */
   data: {
-    results: []
+    ranks: []
+
+  },
+  onItemClick (e) {
+
+    wx.navigateTo({
+      url: `../shareAuthor/index?userId=${e.currentTarget.dataset.userid}&shareUser=${e.currentTarget.dataset.username}`
+
+    })
+
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.getRank()
   },
 
-  async searchResult () {
+  async getRank () {
+
     if (this.isLoading) {
       return
     }
@@ -20,21 +37,23 @@ Page({
       return
     }
     this.isLoading = true
-    const resp = await api.searchResult(this.page, this.keyWord)
+    const resp = await api.getRank(this.page)
+    resp.data.datas.forEach(((value, index, array) => {
+      if (this.initcoin === 0) {
+        this.initcoin = value.coinCount
+      }
+      let rankBgWidth = Math.floor(
+        value.coinCount / this.initcoin * this.windowWidth)
+      this.data.ranks.push({ rankBgWidth, ...value })
+
+    }))
     ++this.page
     this.pageCount = resp.data.pageCount
     this.isLoading = false
     this.setData({
-      results: this.data.results.concat(resp.data.datas)
+      ranks: this.data.ranks
     })
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.keyWord = options.value
-    this.searchResult()
   },
 
   /**
@@ -76,7 +95,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.searchResult()
+    this.getRank()
   },
 
   /**

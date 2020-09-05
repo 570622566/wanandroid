@@ -108,6 +108,34 @@
 					"id": -1,
 					"name": "pages/me/index",
 					"pathName": "pages/me/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rank/index",
+					"pathName": "pages/rank/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/coin/index",
+					"pathName": "pages/coin/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/share/index",
+					"pathName": "pages/share/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addArticle/index",
+					"pathName": "pages/addArticle/index",
 					"scene": null
 				}
 			]

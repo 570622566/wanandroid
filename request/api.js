@@ -172,8 +172,56 @@ function register (userName, passWord, rePassWord) {
 function logout () {
   return request.get(`user/logout/json`)
 }
+
+/**
+ * 获取用户信息
+ * @returns {Promise | Promise<unknown>}
+ */
 function getUserInfo () {
   return request.get(`lg/coin/userinfo/json`)
+}
+
+/**
+ * 排行榜
+ * @returns {Promise | Promise<unknown>}
+ */
+
+function getRank (page) {
+  return request.get(`coin/rank/${page}/json`)
+}
+
+/**
+ * 获取个人积分列表详情
+ * @param page
+ * @returns {Promise | Promise<unknown>}
+ */
+function getCoinList (page) {
+  return request.get(`lg/coin/list/${page}/json`)
+}
+
+/**
+ * 获取自己分享的文章列表
+ * @param page
+ * @returns {Promise | Promise<unknown>}
+ */
+function getMyArticles (page) {
+  return request.get(`user/lg/private_articles/${page}/json`)
+}
+
+/**
+ * 添加文章
+ * @param title
+ * @param link
+ * @returns {Promise | Promise<unknown>}
+ */
+function addShareArticle (title, link) {
+  const parameter = {
+    data: {
+      title,
+      link
+    }
+  }
+  return request.post(`lg/user_article/add/json`, parameter)
 }
 
 module.exports = {
@@ -190,8 +238,12 @@ module.exports = {
   getWebNav: getWebNav,
   getAuthorArticle: getAuthorArticle,
   getShareUserArticle: getShareUserArticle,
-  login:login,
-  register:register,
-  logout:logout,
-  getUserInfo:getUserInfo
+  login: login,
+  register: register,
+  logout: logout,
+  getUserInfo: getUserInfo,
+  getRank: getRank,
+  getCoinList: getCoinList,
+  getMyArticles: getMyArticles,
+  addShareArticle: addShareArticle
 }

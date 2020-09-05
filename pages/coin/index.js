@@ -1,40 +1,48 @@
-// pages/searchResult/index.js
+// pages/coin/index.js
 const api = require('../../request/api.js')
 Page({
-  page: 0,
+  page: 1,
   pageCount: 1,
   isLoading: false,
-  keyWord: '',
   /**
    * 页面的初始数据
    */
   data: {
-    results: []
-  },
-
-  async searchResult () {
-    if (this.isLoading) {
-      return
-    }
-    if (this.page > this.pageCount) {
-      return
-    }
-    this.isLoading = true
-    const resp = await api.searchResult(this.page, this.keyWord)
-    ++this.page
-    this.pageCount = resp.data.pageCount
-    this.isLoading = false
-    this.setData({
-      results: this.data.results.concat(resp.data.datas)
-    })
+    coins: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.keyWord = options.value
-    this.searchResult()
+    this.getCoinList()
+  },
+
+  async getCoinList () {
+
+    if (this.isLoading) {
+      return
+    }
+    if (this.page > this.pageCount) {
+      return
+    }
+    // "2020-09-04 09:23:37 签到 , 积分：10 + 3"
+    this.isLoading = true
+    const resp = await api.getCoinList(this.page)
+    const newResp = resp.data.datas.map((value, index, array) => {
+      return ({
+        desc: value.desc.slice(0, value.desc.indexOf(',')),
+        coinCount: value.coinCount
+      })
+    })
+    console.log(resp)
+    ++this.page
+    this.pageCount = resp.data.pageCount
+    this.isLoading = false
+    this.setData({
+      coins: this.data.coins.concat(newResp)
+    })
+
   },
 
   /**
@@ -76,7 +84,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.searchResult()
+
   },
 
   /**

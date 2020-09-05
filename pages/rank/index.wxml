@@ -1,0 +1,21 @@
+<view class="container">
+
+    <block wx:for="{{ranks}}" wx:key="rank">
+
+        <view class="rank-item" data-userid="{{item.userId}}" data-username="{{item.username}}" bindtap="onItemClick">
+            <view class="rank-bg" style="width: {{item.rankBgWidth}}px"/>
+            <view class="rank-left">
+                <text>{{item.rank}}</text>
+                <text style="font-size: 34rpx">{{item.username}}</text>
+            </view>
+
+            <text style="margin-right: 24rpx">{{item.coinCount}}</text>
+
+
+        </view>
+
+
+    </block>
+
+
+</view>

@@ -12,7 +12,14 @@
     "pages/shareAuthor/index",
     "pages/author/index",
     "pages/login/index",
-    "pages/me/index"
+    "pages/me/index",
+    "pages/coin/index",
+    "pages/rank/index",
+    "pages/share/index",
+    "pages/collect/index",
+    "pages/about/index",
+    "pages/setting/index",
+    "pages/addArticle/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

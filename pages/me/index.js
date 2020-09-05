@@ -15,6 +15,45 @@ Page({
     })
 
   },
+  onRankClick () {
+    wx.navigateTo({
+      url: '/pages/rank/index'
+    })
+
+  },
+  onCoinClick () {
+    wx.navigateTo({
+      url: '/pages/coin/index'
+    })
+
+  },
+  onShareClick () {
+    this.checkLogin('/pages/share/index')
+  },
+
+  checkLogin (url) {
+    const userCache = wx.getStorageSync('user')
+    if (userCache) {
+      wx.navigateTo({
+        url
+      })
+    } else {
+      wx.showModal({
+        title: '登录提示',
+        content: '还没登录，是否登录？',
+        cancelText: '取消',
+        confirmText: '登录',
+        success (res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/index'
+            })
+          }
+        }
+      })
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
