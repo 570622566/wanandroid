@@ -1,4 +1,6 @@
 // components/articleitem/articleitem.js
+const api = require('../../request/api.js')
+const util = require('../../utils/util.js')
 Component({
   /**
    * 组件的属性列表
@@ -11,6 +13,14 @@ Component({
     isTop: {
       type: Boolean,
       value: false
+    },
+    interceptTap: {
+      type: Boolean,
+      value: false
+    },
+    showCollect: {
+      type: Boolean,
+      value: true
     }
   },
 
@@ -36,6 +46,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
     onNavigatorClick: function (e) {
       let url = encodeURIComponent(e.currentTarget.dataset.link)
       wx.navigateTo({
@@ -67,10 +78,30 @@ Component({
         url: `../tixiDetail/index?cid=${e.currentTarget.dataset.cid}&title=${e.currentTarget.dataset.name}`
       })
     },
+
     onCollectClick () {
-      wx.navigateTo({
-        url: `../login/index`
+      if (util.checkLogin()) {
+        if (this.data.interceptTap) {
+          this.triggerEvent('collectEvent')
+        } else {
+          this.collectManager()
+        }
+      }
+
+    },
+    async collectManager () {
+      let resp
+      if (this.data.article.collect) {
+        resp = await api.unCollect(this.data.article.id)
+        this.data.article.collect = false
+      } else {
+        resp = await api.addCollect(this.data.article.id)
+        this.data.article.collect = true
+      }
+      this.setData({
+        article: this.data.article
       })
+      this.triggerEvent('collectEvent')
     }
 
   }

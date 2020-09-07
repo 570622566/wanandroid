@@ -1,4 +1,5 @@
 const api = require('../../request/api.js')
+const util = require('../../utils/util.js')
 
 Page({
   /**
@@ -10,48 +11,32 @@ Page({
   },
 
   onLoginClick () {
-    wx.navigateTo({
-      url: '/pages/login/index'
-    })
-
+    this.navigateTo('/pages/login/index')
   },
   onRankClick () {
-    wx.navigateTo({
-      url: '/pages/rank/index'
-    })
+    this.navigateTo('/pages/rank/index')
 
   },
   onCoinClick () {
-    wx.navigateTo({
-      url: '/pages/coin/index'
-    })
+    this.navigateTo('/pages/coin/index'
+    )
 
   },
   onShareClick () {
-    this.checkLogin('/pages/share/index')
+    if (util.checkLogin()) {
+      this.navigateTo('/pages/share/index')
+    }
+  },
+  onCollectClick () {
+    if (util.checkLogin()) {
+      this.navigateTo('/pages/collect/index')
+    }
   },
 
-  checkLogin (url) {
-    const userCache = wx.getStorageSync('user')
-    if (userCache) {
-      wx.navigateTo({
-        url
-      })
-    } else {
-      wx.showModal({
-        title: '登录提示',
-        content: '还没登录，是否登录？',
-        cancelText: '取消',
-        confirmText: '登录',
-        success (res) {
-          if (res.confirm) {
-            wx.navigateTo({
-              url: '/pages/login/index'
-            })
-          }
-        }
-      })
-    }
+  navigateTo (url) {
+    wx.navigateTo({
+      url
+    })
   },
 
   /**

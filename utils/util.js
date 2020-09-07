@@ -58,6 +58,28 @@ function setCache (key, data) {
   })
 }
 
+function checkLogin () {
+  const userCache = wx.getStorageSync('user')
+  if (userCache) {
+    return true
+  } else {
+    wx.showModal({
+      title: '登录提示',
+      content: '还没登录，是否登录？',
+      cancelText: '取消',
+      confirmText: '登录',
+      success (res) {
+        if (res.confirm) {
+          wx.navigateTo({
+            url: '../login/index'
+          })
+        }
+      }
+    })
+  }
+
+}
+
 function rpxTopx (rpx) {
   return rpx / 750 * wx.getSystemInfoSync().windowWidth
 
@@ -75,5 +97,6 @@ module.exports = {
   dayDiff: dayDiff,
   getDate: getDate,
   hasCache: hasCache,
-  setCache: setCache
+  setCache: setCache,
+  checkLogin: checkLogin
 }

@@ -1,2 +1,6 @@
-<!--pages/collect/index.wxml-->
-<text>pages/collect/index.wxml</text>
+<view class="container">
+    <block wx:for="{{collects}}" wx:key="id">
+        <article-item article="{{item}}"/>
+    </block>
+
+</view>

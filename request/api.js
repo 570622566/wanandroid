@@ -224,6 +224,49 @@ function addShareArticle (title, link) {
   return request.post(`lg/user_article/add/json`, parameter)
 }
 
+/**
+ * 添加收藏
+ * @param title
+ * @param link
+ * @returns {Promise<unknown>}
+ */
+function addCollect (articleId) {
+  return request.post(`lg/collect/${articleId}/json`)
+}
+
+/**
+ * 取消收藏
+ * @param articleId
+ * @returns {Promise<unknown>}
+ */
+function unCollect (articleId) {
+  return request.post(`lg/uncollect_originId/${articleId}/json`)
+}
+
+/**
+ * 取消我的收藏列表的收藏
+ * @param articleId
+ * @param originId
+ * @returns {Promise<unknown>}
+ */
+function unMyCollect (articleId, originId) {
+  const parameter = {
+    data: {
+      originId
+    }
+  }
+  return request.post(`lg/uncollect/${articleId}/json`, parameter)
+}
+
+/**
+ * 我的收藏列表
+ * @param page
+ * @returns {Promise | Promise<unknown>}
+ */
+function getMyCollects (page) {
+  return request.get(`lg/collect/list/${page}/json`)
+}
+
 module.exports = {
   getBanner: getBanner,
   getTopArticles: getTopArticles,
@@ -245,5 +288,9 @@ module.exports = {
   getRank: getRank,
   getCoinList: getCoinList,
   getMyArticles: getMyArticles,
-  addShareArticle: addShareArticle
+  addShareArticle: addShareArticle,
+  addCollect: addCollect,
+  unCollect: unCollect,
+  unMyCollect: unMyCollect,
+  getMyCollects:getMyCollects
 }

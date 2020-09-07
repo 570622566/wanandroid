@@ -1,10 +1,35 @@
-// pages/collect/index.js
+const api = require('../../request/api.js')
 Page({
-
+  page: 0,
+  pageCount: 1,
+  isLoading: false,
   /**
    * 页面的初始数据
    */
   data: {
+    collects: []
+  },
+
+  async getMyCollects () {
+
+    if (this.isLoading) {
+      return
+    }
+    if (this.page > this.pageCount) {
+      return
+    }
+    this.isLoading = true
+    const resp = await api.getMyCollects(this.page)
+    const mapResp = resp.data.datas.map(
+      ((value, index, array) => ({ collect: true, ...value })))
+    console.log(mapResp)
+    ++this.page
+    this.pageCount = resp.data.pageCount
+    this.isLoading = false
+    this.setData({
+      collects: this.data.collects.concat(
+        mapResp)
+    })
 
   },
 
@@ -12,7 +37,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMyCollects()
   },
 
   /**

@@ -16,6 +16,15 @@ Page({
     navHeight: 60
   },
 
+  topCollect (e) {
+
+    console.log(e)
+    utils.checkLogin()
+  },
+  hotCollect (e) {
+    console.log(e)
+  },
+
   async getBanner () {
     const banners = await api.getBanner()
     this.setData({

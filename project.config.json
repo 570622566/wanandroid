@@ -136,6 +136,13 @@
 					"id": -1,
 					"name": "pages/addArticle/index",
 					"pathName": "pages/addArticle/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/collect/index",
+					"pathName": "pages/collect/index",
 					"scene": null
 				}
 			]

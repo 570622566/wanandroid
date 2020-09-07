@@ -9,13 +9,13 @@
 		</swiper>
 		<view class="hots-article">
 			<block wx:for="{{topArticles}}" wx:key="id">
-				<article-item article="{{item}}" is-top />
+				<article-item  data-index="{{index}}" article="{{item}}" is-top bind:collectEvent ="topCollect"/>
 			</block>
 
 		</view>
 		<view class="hots-article">
 			<block wx:for="{{hotsArticles}}" wx:key="id">
-				<article-item article="{{item}}" />
+				<article-item article="{{item}}" bind:collectEvent ="hotCollect"/>
 			</block>
 
 		</view>
