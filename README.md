@@ -3,29 +3,37 @@
 
 玩安卓微信小程序是基于 [玩安卓api](https://wanandroid.com/index) 开发的一款比较完整，UI质量比较高的项目，值得新手学习。
 
+## 能从该项目中学到什么？
+
+主要功能点
+1. 自定义标题栏
+2. tabs + swiper 联动
+3. 双scroll-view 联动 
+4. 自定义component及数据传递，事件传递 
+
 ## 项目截图
 
-![首页](screenshot/Screenshot_20200907-100857.jpg)
+![首页](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100857.jpg)
 
-![项目](screenshot/Screenshot_20200907-100906.jpg)
+![项目](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100906.jpg)
 
-![问答](screenshot/Screenshot_20200907-100917.jpg)
+![问答](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100917.jpg)
 
-![体系](screenshot/Screenshot_20200907-100923.jpg)
+![体系](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100923.jpg)
 
-![导航](screenshot/Screenshot_20200907-100930.jpg)
+![导航](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100930.jpg)
 
-![搜索](screenshot/Screenshot_20200907-100940.jpg)
+![搜索](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100940.jpg)
 
-![搜索结果](screenshot/Screenshot_20200907-100945.jpg)
+![搜索结果](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100945.jpg)
 
-![个人中心](screenshot/Screenshot_20200907-100957.jpg)
+![个人中心](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100957.jpg)
 
-![排行榜](screenshot/Screenshot_20200907-101008.jpg)
+![排行榜](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-101008.jpg)
 
-![分享者详情](screenshot/Screenshot_20200907-101019.jpg)
+![分享者详情](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-101019.jpg)
 
-![积分详情列表](screenshot/Screenshot_20200907-101028.jpg)
+![积分详情列表](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-101028.jpg)
 
 ## 项目功能
 
