@@ -12,7 +12,7 @@
 4. 自定义component及数据传递，事件传递 
 
 ## 项目截图
-
+（如果显示不了图片，请使用科学上网）
 ![首页](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100857.jpg)
 
 ![项目](https://github.com/570622566/wanandroid/raw/master/screenshot/Screenshot_20200907-100906.jpg)
