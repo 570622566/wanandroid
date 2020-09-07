@@ -1,2 +1,40 @@
-<!--pages/about/index.wxml-->
-<text>pages/about/index.wxml</text>
+<view class="container">
+    <swiper class="about-swiper" vertical>
+        <swiper-item>
+            <view class="user-info">
+                <image class="header-img" src="../../assets/icon_header1.png" widthFix/>
+                <text style="margin-top: 60rpx">github地址</text>
+                <text>https://github.com/570622566/wanandroid</text>
+                <text style="padding: 24rpx">玩安卓微信小程序是基于 玩安卓api 开发的一款比较完整，UI质量比较高的项目，值得新手学习。</text>
+
+                <view class="can-learn">
+                    <text>能从该项目中学到什么？</text>
+                    <text style="margin-top: 30rpx">自定义标题栏</text>
+                    <text>tabs + swiper 联动</text>
+                    <text>双scroll-view 联动</text>
+                    <text>自定义component及数据传递，事件传递</text>
+                </view>
+
+            </view>
+
+            <view class="pullup">
+                <image src="../../assets/icon_up.png" style="width: 60rpx;height: 60rpx"/>
+                <text style="color: #dbdbdb;font-size: 22rpx">捐赠咖啡</text>
+            </view>
+
+        </swiper-item>
+        <swiper-item>
+
+            <view class="coffee">
+                <image src="../../assets/wechatpay.png"/>
+                <image src="../../assets/alipay.jpg"/>
+
+
+            </view>
+
+
+        </swiper-item>
+
+    </swiper>
+
+</view>

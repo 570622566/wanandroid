@@ -17,8 +17,6 @@ Page({
   },
 
   topCollect (e) {
-
-    console.log(e)
     utils.checkLogin()
   },
   hotCollect (e) {

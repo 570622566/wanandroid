@@ -1,13 +1,24 @@
 // pages/setting/index.js
 Page({
 
+  cacheData: ['tixi', 'webNav', 'tabs'],
+
   /**
    * 页面的初始数据
    */
-  data: {
+  data: {},
+
+  onClearCacheClick () {
+
+    this.cacheData.forEach(value => {
+      wx.removeStorageSync(value)
+    })
+    wx.showToast({
+      title: '清理完成',
+      icon: 'success'
+    })
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

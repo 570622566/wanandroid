@@ -10,6 +10,20 @@ Page({
     showLogin: true
   },
 
+  onLogoutClick () {
+
+    wx.showModal({
+      title: '提示',
+      content: '是否退出当前账号？',
+      cancelText: '否',
+      confirmText: '是',
+      success: res => {
+        if (res.confirm) {
+          this.logout()
+        }
+      }
+    })
+  },
   onLoginClick () {
     this.navigateTo('/pages/login/index')
   },
@@ -20,7 +34,6 @@ Page({
   onCoinClick () {
     this.navigateTo('/pages/coin/index'
     )
-
   },
   onShareClick () {
     if (util.checkLogin()) {
@@ -32,6 +45,12 @@ Page({
       this.navigateTo('/pages/collect/index')
     }
   },
+  onAboutClick () {
+      this.navigateTo('/pages/about/index')
+  },
+  onSettingClick () {
+      this.navigateTo('/pages/setting/index')
+  },
 
   navigateTo (url) {
     wx.navigateTo({
@@ -39,13 +58,21 @@ Page({
     })
   },
 
+  async logout () {
+    await api.logout()
+    wx.removeStorageSync('cookie')
+    wx.removeStorageSync('user')
+    this.setData({
+      user: {},
+      showLogin: true
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '我的'
-    })
+
   },
 
   /**

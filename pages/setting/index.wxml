@@ -1,2 +1,9 @@
-<!--pages/setting/index.wxml-->
-<text>pages/setting/index.wxml</text>
+<view class="container">
+    <view class="menu" bindtap="onClearCacheClick">
+        <image class="left-img" src="../../assets/icon_clearcache.png"/>
+        <text>清理缓存</text>
+        <image class="right-img" src="../../assets/icon_go.png"></image>
+    </view>
+
+
+</view>

@@ -1,6 +1,6 @@
 <view class="container">
     <block wx:for="{{collects}}" wx:key="id">
-        <article-item article="{{item}}"/>
+        <article-item article="{{item}}" data-index="{{index}}" interceptTap bind:collectEvent="onCollectListener"/>
     </block>
 
 </view>

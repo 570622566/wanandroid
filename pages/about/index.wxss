@@ -1,1 +1,55 @@
-/* pages/about/index.wxss */
+.about-swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-img {
+    width: 160rpx;
+    height: 160rpx;
+    margin-top: 36rpx;
+}
+
+.user-info {
+    color: #666666;
+    font-size: 28rpx;
+}
+
+.pullup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0rpx;
+}
+
+.coffee {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.coffee image {
+    width: 460rpx;
+    height: 50%;
+
+}
+.can-learn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32rpx;
+    color:#333333;
+}
+

@@ -143,6 +143,13 @@
 					"id": -1,
 					"name": "pages/collect/index",
 					"pathName": "pages/collect/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/about/index",
+					"pathName": "pages/about/index",
 					"scene": null
 				}
 			]

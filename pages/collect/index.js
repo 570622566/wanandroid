@@ -33,6 +33,36 @@ Page({
 
   },
 
+  onCollectListener (e) {
+
+    wx.showModal({
+      title: '提示',
+      content: '是否取消当前收藏的这篇文章？',
+      cancelText: '否',
+      confirmText: '是',
+      success: res => {
+        if (res.confirm) {
+          this.unMyCollect(e.currentTarget.dataset.index)
+        }
+      }
+    })
+  },
+
+  async unMyCollect (index) {
+
+    const { id, originId } = this.data.collects[index]
+    await api.unMyCollect(id, originId)
+    this.data.collects.splice(index, 1)
+    this.setData({
+      collects: this.data.collects
+    })
+    wx.showToast({
+      title: '取消成功',
+      icon: 'success'
+    })
+
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
